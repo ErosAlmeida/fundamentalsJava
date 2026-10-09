@@ -23,4 +23,18 @@ public class Aplicacao {
     public String toString() {
         return id + " - " + getDescricao();
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Produto)) {
+            return false;
+        }
+        Produto other = (Produto) obj;
+        if (this.id == other.getId()) {
+            return true;
+        }
+        return false;
+    }
 }
