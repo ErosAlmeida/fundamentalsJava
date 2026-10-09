@@ -3,7 +3,7 @@ package comparable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Produto01 {
+public class Produto01 implements Comparable<Produto01>{
 
     private int id;
     private String descricao;
@@ -47,5 +47,10 @@ public class Produto01 {
         for (aplication.Produto produto : produtos) {
             System.out.println(produto);
         }
+    }
+
+    @Override
+    public int compareTo(Produto01 o) {
+        return 0;
     }
 }
