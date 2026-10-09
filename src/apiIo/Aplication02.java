@@ -17,7 +17,7 @@ public class Aplication02 {
         ) {
             transfer(in, out);
             System.out.println("Arquivo copiado com sucesso!");
-
+//teste
         } catch (IOException e) {
             System.out.println("Erro ao copiar o arquivo: " + e.getMessage());
         }
