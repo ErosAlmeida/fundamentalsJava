@@ -37,4 +37,8 @@ public class Aplicacao {
         }
         return false;
     }
+
+    public int hashcode(){
+        return 1;
+    }
 }
