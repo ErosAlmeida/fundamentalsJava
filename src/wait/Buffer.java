@@ -9,7 +9,7 @@ public class Buffer {
     private Queue<Integer> fila = new LinkedList<Integer>();
 
     public synchronized void produzir(int n){
-        if (fila.size() == MAX){
+        while (fila.size() == MAX){
             try {
                 wait();
             } catch (InterruptedException e) {
