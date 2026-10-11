@@ -4,7 +4,7 @@ public class Contador1 {
 
     private int valor;
 
-    public void increment(){
+    public synchronized void increment(){
         valor++;
     }
 
