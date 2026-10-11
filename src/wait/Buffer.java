@@ -8,12 +8,31 @@ public class Buffer {
 
     private Queue<Integer> fila = new LinkedList<Integer>();
 
-    public void produzir(int n){
+    public synchronized void produzir(int n){
+        if (fila.size() == MAX){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
         fila.offer(n);
+        imprimir();
     }
 
-    public int consumir(){
+    public synchronized int consumir(){
         int n = fila.poll();
+        imprimir();
         return n;
+    }
+    private void imprimir(){
+        System.out.println("=>");
+
+        for (Integer n : fila){
+            System.out.println(n + "");
+        }
+
+        System.out.println();
     }
 }
