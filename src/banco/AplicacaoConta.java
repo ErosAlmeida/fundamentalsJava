@@ -13,15 +13,15 @@ public class AplicacaoConta {
             throw new RuntimeException(e);
         }
 
-//        List<ContaCorrente> lista = new ArrayList<>();
-//
-//        lista.add(new ContaCorrente());
-//        lista.add(new ContaCorrente());
-//        lista.add(new ContaCorrente());
-//
-//        for(ContaCorrente contaCorrente : lista){
-//            System.out.println(contaCorrente.getSaldo());
-//        }
+        List<ContaCorrente> lista = new ArrayList<>();
+
+        lista.add(new ContaCorrente());
+        lista.add(new ContaCorrente());
+        lista.add(new ContaCorrente());
+
+        for(ContaCorrente contaCorrente : lista){
+            System.out.println(contaCorrente.getSaldo());
+        }
 
     }
 }
