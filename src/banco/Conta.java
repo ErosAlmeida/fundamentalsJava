@@ -3,7 +3,7 @@ package banco;
 public abstract class Conta {
     private double saldo;
 
-    public abstract void sacar(double valor);
+    public abstract void sacar(double valor) throws SaldoInsuficienteException;
 
     public abstract void depositar(double valor);
 
@@ -14,4 +14,6 @@ public abstract class Conta {
     protected void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
+    public abstract void getSaldo(int i);
 }
