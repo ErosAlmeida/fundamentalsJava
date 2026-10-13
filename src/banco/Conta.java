@@ -6,4 +6,12 @@ public abstract class Conta {
     public abstract void sacar(double valor);
 
     public abstract void depositar(double valor);
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 }
