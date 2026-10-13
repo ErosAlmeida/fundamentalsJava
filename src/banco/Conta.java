@@ -12,7 +12,7 @@ public abstract class Conta {
     }
 
     protected void setSaldo(double saldo) {
-        this.saldo = saldo;
+
     }
 
     public abstract void getSaldo(int i);
